@@ -88,32 +88,18 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Game Styles */
-#maze-container {
-  margin: 3rem auto;
-  display: grid;
-  grid-template-columns: repeat(10, 30px);
-  grid-template-rows: repeat(10, 30px);
-  gap: 2px;
-  width: max-content;
+.book-cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #efe8dd;
 }
 
-.cell {
-  width: 30px;
-  height: 30px;
-  background-color: #d6cfc4;
-  border-radius: 2px;
-}
-
-.wall {
-  background-color: #5a3e36;
-}
-
-.player {
-  background-color: crimson;
-  border-radius: 50%;
-}
-
-.exit {
-  background-color: seagreen;
+.book-image {
+  width: 90%;
+  max-width: 1200px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
