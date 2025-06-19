@@ -50,10 +50,23 @@ main {
   border-radius: 6px;
   margin-top: 1rem;
   font-weight: bold;
+  animation: pulse 2s infinite;
 }
 
 .buy-button:hover {
   background-color: #3f2b26;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .coming-soon h2 {
