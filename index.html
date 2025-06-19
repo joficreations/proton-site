@@ -14,24 +14,22 @@
         cursor: pointer;
       }
       .language-switcher span {
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
+        margin: 0 0.5rem;
       }
       .buy-button {
-        display: block;
-        margin: 1rem auto 0 auto;
+        display: inline-block;
+        margin-top: 2rem;
         padding: 0.5rem 1rem;
         font-size: 1rem;
         text-align: center;
         text-decoration: none;
-        background-color: #666;
+        background-color: #444;
         color: white;
         border-radius: 5px;
-        max-width: 200px;
         transition: background-color 0.3s ease, box-shadow 0.3s ease;
       }
       .buy-button:hover {
-        background-color: #888;
+        background-color: #666;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
       }
     </style>
@@ -79,7 +77,7 @@
           illustrationer bjuder den in till samtal, eftertanke – eller bara en
           stunds vila i vardagen.<br /><br />
           <em
-            >En liten berättelse om något stort. Kanske till och med en
+            >En liten berättelse om något stort.<br />Kanske till och med en
             meditation om varifrån vi kommer.</em
           >
         </p>
@@ -91,29 +89,31 @@
           illustrations, it invites reflection, conversation – or simply a
           moment of rest in everyday life.<br /><br />
           <em
-            >A small story about something big. Perhaps even a meditation on
-            where we come from.</em
+            >A small story about something big.<br />Perhaps even a meditation
+            on where we come from.</em
           >
         </p>
-        <a
-          href="https://books.apple.com/se/book/id6747363139"
-          class="buy-button"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-lang="sv"
-        >
-          Köp boken på Apple Books
-        </a>
-        <a
-          href="https://books.apple.com/us/book/id6747363139"
-          class="buy-button"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-lang="en"
-          style="display: none"
-        >
-          Buy the book on Apple Books
-        </a>
+        <div style="text-align: left">
+          <a
+            href="https://books.apple.com/se/book/id6747363139"
+            class="buy-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-lang="sv"
+          >
+            Köp boken på Apple Books
+          </a>
+          <a
+            href="https://books.apple.com/us/book/id6747363139"
+            class="buy-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-lang="en"
+            style="display: none"
+          >
+            Buy the book on Apple Books
+          </a>
+        </div>
       </section>
 
       <section class="coming-soon">
