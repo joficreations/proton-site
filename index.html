@@ -5,11 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>En liten berättelse om något stort</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      .language-switcher {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+      .language-switcher span {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+      }
+      .buy-button {
+        display: block;
+        margin: 1rem auto 0 auto;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        text-align: center;
+        text-decoration: none;
+        background-color: #666;
+        color: white;
+        border-radius: 5px;
+        max-width: 200px;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+      .buy-button:hover {
+        background-color: #888;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+    <script>
+      function switchLanguage(lang) {
+        document.querySelectorAll("[data-lang]").forEach((el) => {
+          el.style.display =
+            el.getAttribute("data-lang") === lang ? "block" : "none";
+        });
+      }
+      window.onload = () => switchLanguage("sv");
+    </script>
   </head>
   <body>
+    <div class="language-switcher">
+      <span onclick="switchLanguage('sv')">🇸🇪</span>
+      <span onclick="switchLanguage('en')">🇬🇧</span>
+    </div>
+
     <header>
-      <h1>En liten berättelse om något stort</h1>
-      <p class="tagline">En varm och poetisk bok om universums minsta hjälte</p>
+      <h1 data-lang="sv">En liten berättelse om något stort</h1>
+      <h1 data-lang="en" style="display: none">
+        A Small Story About Something Big
+      </h1>
+      <p class="tagline" data-lang="sv">
+        En varm och poetisk bok om universums minsta hjälte
+      </p>
+      <p class="tagline" data-lang="en" style="display: none">
+        A warm and poetic book about the universe's tiniest hero
+      </p>
     </header>
 
     <main>
@@ -19,36 +71,70 @@
           alt="Bokomslag"
           class="cover"
         />
-        <p>
+        <p data-lang="sv">
           En stillsam och poetisk berättelse om livets början, tidens gång och
           vår plats i universum – berättad av en liten röd proton med stora
           minnen och en lång resa bakom sig. Den här boken passar perfekt för
           högläsning tillsammans. Med lågmäld humor, enkla ord och vackra
           illustrationer bjuder den in till samtal, eftertanke – eller bara en
-          stunds vila i vardagen. En liten berättelse om något stort. Kanske
-          till och med en meditation om varifrån vi kommer.
+          stunds vila i vardagen.<br /><br />
+          <em
+            >En liten berättelse om något stort. Kanske till och med en
+            meditation om varifrån vi kommer.</em
+          >
+        </p>
+        <p data-lang="en" style="display: none">
+          A gentle and poetic tale about the beginning of life, the passage of
+          time, and our place in the universe – told by a small red proton with
+          big memories and a long journey behind it. This book is perfect for
+          reading aloud together. With quiet humour, simple words and beautiful
+          illustrations, it invites reflection, conversation – or simply a
+          moment of rest in everyday life.<br /><br />
+          <em
+            >A small story about something big. Perhaps even a meditation on
+            where we come from.</em
+          >
         </p>
         <a
           href="https://books.apple.com/se/book/id6747363139"
           class="buy-button"
           target="_blank"
           rel="noopener noreferrer"
+          data-lang="sv"
         >
           Köp boken på Apple Books
+        </a>
+        <a
+          href="https://books.apple.com/us/book/id6747363139"
+          class="buy-button"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-lang="en"
+          style="display: none"
+        >
+          Buy the book on Apple Books
         </a>
       </section>
 
       <section class="coming-soon">
-        <h2>Kommande:</h2>
-        <ul>
+        <h2 data-lang="sv">Kommande:</h2>
+        <h2 data-lang="en" style="display: none">Coming soon:</h2>
+        <ul data-lang="sv">
           <li>🇬🇧 Engelsk upplaga kommer i Juli 2025</li>
           <li>📘 Nästa bok i serien kommer i Augusti 2025</li>
+        </ul>
+        <ul data-lang="en" style="display: none">
+          <li>🇬🇧 English edition arriving July 2025</li>
+          <li>📘 Next book in the series coming August 2025</li>
         </ul>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2025 Martin Lundgren · thelifeofproton.com</p>
+      <p data-lang="sv">&copy; 2025 Martin Lundgren · thelifeofproton.com</p>
+      <p data-lang="en" style="display: none">
+        &copy; 2025 Martin Lundgren · thelifeofproton.com
+      </p>
     </footer>
   </body>
 </html>
